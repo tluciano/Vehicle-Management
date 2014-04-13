@@ -1,0 +1,57 @@
+table th { text-align: center; }
+img {
+    height: auto;
+    width: 90px;
+    display: block;
+}
+table{
+  margin-top: 10px;
+}
+
+.error{
+    padding: 5px;
+}
+
+.view-animate-container {
+  position:relative;
+  height:750px!important;
+  position:relative;
+  overflow:hidden;
+}
+
+.view-animate {
+  padding:10px;
+}
+
+.view-animate.ng-enter, .view-animate.ng-leave {
+    -webkit-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+    -moz-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+     -o-transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000);
+        transition: all 500ms cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+
+    -webkit-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+       -moz-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+         -o-transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+            transition-timing-function: cubic-bezier(0.190, 1.000, 0.220, 1.000); /* easeOutExpo */
+
+    display:block;
+    width:100%;
+
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    padding:10px;
+}
+
+.view-animate.ng-enter {
+  left:100%;
+}
+.view-animate.ng-enter.ng-enter-active {
+  left:0;
+}
+.view-animate.ng-leave.ng-leave-active {
+  left:-100%;
+}
+.ng-table-counts {display: none;}

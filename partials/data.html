@@ -1,0 +1,43 @@
+<h3 ng-show="add">Adicionar</h3>
+<h3 ng-show="remove">Editar</h3>
+<form name="FormCar" class="form">
+    <div class="form-group" ng-class="{error: FormCar.placa.$invalid && !FormCar.placa.$pristine}">
+        <label for="placa">*Placa: </label>
+        <input type="text" name="placa" id="placa" class="form-control" ng-show="!add" ng-model="itemSelected.placa" readonly>
+        <input type="text" name="placa" id="placa" class="form-control" ng-show="add" ng-model="itemSelected.placa" required>
+        <div ng-show="FormCar.placa.$error.required && !FormCar.placa.$pristine" class="error alert-danger">Campo requerido</div>
+    </div>
+    <div class="form-group" ng-class="{error: FormCar.imagem.$invalid && !FormCar.imagem.$pristine}">
+        <label for="imagem">Imagem: </label>
+        <input type="url" name="imagem" id="imagem" class="form-control" ng-model="itemSelected.imagem">
+        <div ng-show="FormCar.imagem.$error.url" class="error alert-danger">Informe uma url</div>
+    </div>
+    <div class="form-group" ng-class="{error: FormCar.marca.$invalid && !FormCar.marca.$pristine}">
+        <label for="marca">*Marca: </label>
+        <input type="text" name="marca" id="marca" class="form-control" ng-model="itemSelected.marca" required>
+        <div ng-show="FormCar.marca.$error.required && !FormCar.marca.$pristine" class="error alert-danger">Campo requerido</div>
+    </div>
+    <div class="form-group" ng-class="{error: FormCar.modelo.$invalid && !FormCar.modelo.$pristine}">
+        <label for="modelo">*Modelo: </label>
+        <input type="text" name="modelo" id="modelo" class="form-control" ng-model="itemSelected.modelo" required>
+        <div ng-show="FormCar.modelo.$error.required && !FormCar.modelo.$pristine" class="error alert-danger">Campo requerido</div>
+    </div>
+    <div class="form-group">
+        <label for="combustivel">Combustível: </label>
+        <select name="combustivel" id="combustivel" class="form-control" ng-model="itemSelected.combustivel">
+            <option value="Gasolina">Gasolina</option>
+            <option value="Alcool">Alcool</option>
+            <option value="Flex">Flex</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="cor">Cor: </label>
+        <input type="text" name="cor" id="cor" class="form-control" ng-model="itemSelected.cor">
+    </div>
+
+  <br>
+  <a href="#/list" class="btn btn-default">Cancel</span></a>
+  <button ng-click="add()" ng-show="add" ng-disabled="FormCar.$invalid" class="btn btn-primary">Save</button>
+  <button ng-click="save()" ng-show="!add" ng-disabled="FormCar.$invalid" class="btn btn-primary">Save</button>
+  <button ng-click="destroy()" ng-show="remove" class="btn btn-danger">Delete</button>
+</form>
