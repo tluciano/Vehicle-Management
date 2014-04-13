@@ -7,7 +7,7 @@
   * [Twitter Bootstrap](#twitter-bootstrap)
 
 ## Demo
-  * [Link](http://http://desafio.thiagoluciano.com.br/)
+  * [Link](http://desafio.thiagoluciano.com.br/)
 
 
 
